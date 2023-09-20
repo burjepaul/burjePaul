@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import { motion } from "framer-motion-3d";
+import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
 import './homePage.styles.scss'
 import Phone3D from "../../components/3dComponents/MobilePhone";
