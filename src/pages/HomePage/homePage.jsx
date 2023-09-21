@@ -13,6 +13,7 @@ const HomePage = () => {
 
     return(
       <div className="container">
+          <h1 className="main-title">Create Your Own, Custom Website, Mobile App and Many More</h1>
 
           <div className="preview">
             <Canvas shadows gl={{preserveDrawingBuffer:true}}>
@@ -31,7 +32,7 @@ const HomePage = () => {
                     minPolarAngle={Math.PI / 2}
                     autoRotate
                     />
-                <PerspectiveCamera makeDefault position={[0, 0, 12]}/>
+                <PerspectiveCamera makeDefault position={[0, 0, 11]}/>
 
 
 
