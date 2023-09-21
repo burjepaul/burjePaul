@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
@@ -7,9 +7,13 @@ import Phone3D from "../../components/3dComponents/MobilePhone";
 import Monitor3D from "../../components/3dComponents/Monitor";
 import Loader from "../../components/Loader/Loader";
 import Rendering from "../../components/3dComponents/3dRendering";
+import { HandleMobilesize } from "../../config/helpers";
 
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  HandleMobilesize(setIsMobile)
 
     return(
       <div className="container">
@@ -23,11 +27,12 @@ const HomePage = () => {
                 <ambientLight intensity={1} />
                 {/* <pointLight color="lightblue" intensity={20} position={[1, 1 ,7]}/> */}
                 <spotLight color="lightblue" intensity={10} position={[1,1,10]} angle={15} castShadow/>
-                <Phone3D/>
-                <Monitor3D/>
-                <Rendering/>
+                <Phone3D isMobile={isMobile}/>
+                <Monitor3D isMobile={isMobile}/>
+                <Rendering isMobile={isMobile}/>
                 <OrbitControls
                     enableZoom={false}
+                    enablePan={false}
                     maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
                     autoRotate

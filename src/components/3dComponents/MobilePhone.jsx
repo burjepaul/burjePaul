@@ -9,7 +9,7 @@ import { useGLTF } from '@react-three/drei'
 const Phone3D = (props) => {
   const { nodes, materials } = useGLTF('../../MobilePhone.glb')
   return (
-    <group {...props} dispose={null} position={[0, 0, 2]} rotation={[0, 0, 0]}>
+    <group {...props} dispose={null} position={props.isMobile ? [0, 0, 1.5] : [0, 0, 2]} rotation={[0, 0, 0]} scale={props.isMobile ? 0.8 : 1}>
       <group position={[-0.137, -0.027, 0]}>
         <group scale={0.025}>
           <mesh geometry={nodes.Rectangle001_1.geometry} material={materials.Material__123} />
