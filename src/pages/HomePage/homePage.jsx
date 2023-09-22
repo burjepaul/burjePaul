@@ -8,6 +8,7 @@ import Monitor3D from "../../components/3dComponents/Monitor";
 import Loader from "../../components/Loader/Loader";
 import Rendering from "../../components/3dComponents/3dRendering";
 import { HandleMobilesize } from "../../config/helpers";
+import Scroller from "../../components/Scroller/scroller";
 
 
 const HomePage = () => {
@@ -20,6 +21,7 @@ const HomePage = () => {
           <h1 className="main-title">Create Your Own, Custom Website, Mobile App and Many More</h1>
 
           <div className="preview">
+            {isMobile ? <Scroller/> : null}
             <Canvas shadows gl={{preserveDrawingBuffer:true}}>
               <Suspense fallback={<Loader/>}>
 
@@ -38,8 +40,6 @@ const HomePage = () => {
                     autoRotate
                     />
                 <PerspectiveCamera makeDefault position={[0, 0, 11]}/>
-
-
 
               </Suspense>
             </Canvas>
