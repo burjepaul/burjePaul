@@ -3,13 +3,14 @@ import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
 import './homePage.styles.scss'
+import { overviewCards } from "../../config/constants";
 import Phone3D from "../../components/3dComponents/MobilePhone";
 import Monitor3D from "../../components/3dComponents/Monitor";
 import Loader from "../../components/Loader/Loader";
 import Rendering from "../../components/3dComponents/3dRendering";
 import { HandleMobilesize } from "../../config/helpers";
 import Scroller from "../../components/Scroller/scroller";
-
+import OverviewCard from "../../components/overviewCard/overviewCard";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -29,7 +30,6 @@ const HomePage = () => {
 
                   <hemisphereLight intensity={3} groundColor={"black"}/>
                   <ambientLight intensity={1} />
-                  {/* <pointLight color="lightblue" intensity={20} position={[1, 1 ,7]}/> */}
                   <spotLight color="lightblue" intensity={10} position={[1,1,10]} angle={15} castShadow/>
                   <Phone3D isMobile={isMobile}/>
                   <Monitor3D isMobile={isMobile}/>
@@ -47,9 +47,16 @@ const HomePage = () => {
               </Canvas>
             </div>
         </div>        
-          
+
         <div className="overview-container">
           <h1 className="overview-title">Overview</h1>
+          <div className="overview-card-container">
+            {overviewCards.map((entry, index) => {
+              return(
+                <OverviewCard title={entry.title} images={entry.imagesSource} description={entry.descriptions} key={index}/>
+              )
+            })}
+          </div>
         </div>
 
           <div className="footer">
