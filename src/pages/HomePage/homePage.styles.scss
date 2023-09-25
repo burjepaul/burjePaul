@@ -1,4 +1,6 @@
-.container {
+.page-container{
+
+  .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover; 
     height: 90vh;
-
+    
     .main-title{
       color: var(--color-title);
       font-family: "Amiri";
@@ -19,13 +21,13 @@
       top:18%;
       z-index: 1;
     }
-
+    
     .preview {
+      padding-top: 5%;
       height: 100%;
-      width: 100%;
+      width: 120%;
     }
   }
-  
   
   .footer {
     display: flex;
@@ -34,3 +36,15 @@
     justify-content: center;
     height: 16vh;
   }
+
+  .overview-container{
+
+    .overview-title{
+      color: var(--color-title);
+      font-family: "Amiri";
+      font-size: var(--step-4);
+      margin-left: 25%;
+      text-shadow: var(--color-paragraph) 1px 0 10px;
+    }
+  }
+}

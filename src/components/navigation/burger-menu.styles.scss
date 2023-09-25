@@ -5,6 +5,7 @@ nav{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
+    position: absolute;
 }
 
 .logo-container{
@@ -38,7 +39,7 @@ nav{
     width: 30%;
     position: absolute;
     right: 0;
-    z-index: 3;
+    margin-top: -6%;
 }
 
 .hidden{
@@ -50,7 +51,7 @@ nav{
 }
 
 .burger-bar.clicked:nth-child(1){
-    transform: rotate(45deg) translate(1.25em, 1.25em);
+    transform: rotate(45deg) translate(0.75em, 0.75em);
     transition: ease-out 0.5s
 }
 

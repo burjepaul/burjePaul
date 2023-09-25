@@ -17,37 +17,44 @@ const HomePage = () => {
   HandleMobilesize(setIsMobile)
 
     return(
-      <div className="container">
-          <h1 className="main-title">Create Your Own, Custom Website, Mobile App and Many More</h1>
+      <div className="page-container">
 
-          <div className="preview">
-            {isMobile ? <Scroller/> : null}
-            <Canvas shadows gl={{preserveDrawingBuffer:true}}>
-              <Suspense fallback={<Loader/>}>
+        <div className="hero-container">
+            <h1 className="main-title">Create Your Own, Custom Website, Mobile App and Many More</h1>
 
-                <hemisphereLight intensity={3} groundColor={"black"}/>
-                <ambientLight intensity={1} />
-                {/* <pointLight color="lightblue" intensity={20} position={[1, 1 ,7]}/> */}
-                <spotLight color="lightblue" intensity={10} position={[1,1,10]} angle={15} castShadow/>
-                <Phone3D isMobile={isMobile}/>
-                <Monitor3D isMobile={isMobile}/>
-                <Rendering isMobile={isMobile}/>
-                <OrbitControls
-                    enableZoom={false}
-                    enablePan={false}
-                    maxPolarAngle={Math.PI / 2}
-                    minPolarAngle={Math.PI / 2}
-                    autoRotate
-                    />
-                <PerspectiveCamera makeDefault position={[0, 0, 11]}/>
+            <div className="preview">
+              {isMobile ? <Scroller/> : null}
+              <Canvas shadows gl={{preserveDrawingBuffer:true}}>
+                <Suspense fallback={<Loader/>}>
 
-              </Suspense>
-            </Canvas>
-          </div>
+                  <hemisphereLight intensity={3} groundColor={"black"}/>
+                  <ambientLight intensity={1} />
+                  {/* <pointLight color="lightblue" intensity={20} position={[1, 1 ,7]}/> */}
+                  <spotLight color="lightblue" intensity={10} position={[1,1,10]} angle={15} castShadow/>
+                  <Phone3D isMobile={isMobile}/>
+                  <Monitor3D isMobile={isMobile}/>
+                  <Rendering isMobile={isMobile}/>
+                  <OrbitControls
+                      enableZoom={false}
+                      enablePan={false}
+                      maxPolarAngle={Math.PI / 2}
+                      minPolarAngle={Math.PI / 2}
+                      autoRotate
+                      />
+                  <PerspectiveCamera makeDefault position={[0, 0, 11]}/>
+
+                </Suspense>
+              </Canvas>
+            </div>
+        </div>        
           
+        <div className="overview-container">
+          <h1 className="overview-title">Overview</h1>
+        </div>
+
           <div className="footer">
           </div>
-      </div>        
+      </div>
     )
 }
 
