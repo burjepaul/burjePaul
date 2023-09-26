@@ -16,3 +16,36 @@ export const HandleMobilesize = (setIsMobile) => {
         }
     },[setIsMobile])
 }
+
+export const fadeIn = (direction, type, delay, duration) => {
+    return {
+      hidden: {
+        x: direction === "left" ? 200 : direction === "right" ? -200 : 0,
+        y: direction === "up" ? 200 : direction === "down" ? -200 : 0,
+        opacity: 0,
+      },
+      show: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: type,
+          delay: delay,
+          duration: duration,
+          ease: "easeOut",
+        },
+      },
+    };
+  };
+
+  export const staggerContainer = (staggerChildren, delayChildren) => {
+    return {
+      hidden: {},
+      show: {
+        transition: {
+          staggerChildren: staggerChildren,
+          delayChildren: delayChildren || 0,
+        },
+      },
+    };
+  };

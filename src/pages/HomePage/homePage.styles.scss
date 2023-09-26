@@ -45,13 +45,13 @@
       font-family: "Amiri";
       font-size: var(--step-4);
       margin-left: 25%;
+      margin-top: 2rem;
       text-shadow: var(--color-paragraph) 1px 0 10px;
     }
 
     .overview-card-container{
       display: grid;
       max-width: 1200px;
-      grid-template-columns: 50% 50%;
       grid-row-gap: 4rem;
       margin: auto;
 
