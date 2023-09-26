@@ -12,7 +12,7 @@ const TechnologyCard = ({values, index}) => {
         variants={fadeIn("left", "spring", 0.1 * index, 0.75)}
         className="technology">
             <div 
-            className="image-container"style={{
+            className="image-container" style={{
                 backgroundImage:'url(' + require(`../../assets/technology-icons/${values.imgSource}.png`) + ')',
                 backgroundSize:'80% 80%',
                 backgroundRepeat:'no-repeat',

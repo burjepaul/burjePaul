@@ -2,6 +2,7 @@ import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
+import Iframe from "react-iframe";
 
 import './homePage.styles.scss'
 import { overviewCards, technologys } from "../../config/constants";
@@ -9,10 +10,11 @@ import Phone3D from "../../components/3dComponents/MobilePhone";
 import Monitor3D from "../../components/3dComponents/Monitor";
 import Loader from "../../components/Loader/Loader";
 import Rendering from "../../components/3dComponents/3dRendering";
-import { HandleMobilesize, staggerContainer } from "../../config/helpers";
+import { HandleMobilesize, fadeIn, staggerContainer } from "../../config/helpers";
 import Scroller from "../../components/Scroller/scroller";
 import OverviewCard from "../../components/overviewCard/overviewCard";
 import TechnologyCard from "../../components/technologyCard/technology";
+import VideoAnimation from '../../assets/LogoVideo.mp4'
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -82,6 +84,71 @@ const HomePage = () => {
                   )
                 })}
         </motion.div>
+
+        <h1 className="projects-title">Projects.</h1>
+        <h2 className="projects-subtitle">Websites</h2>
+        <motion.div 
+          variants={staggerContainer()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true, amount:0.25}}>
+            <motion.div variants={fadeIn("right", "spring", 0.5, 1.5)}>
+
+              <Iframe url="https://fotbal-predictions.netlify.app"
+                width="100%"
+                height="400px"
+                id=""
+                className="iframe"
+                display="block"
+                position="relative"
+                />
+
+              </motion.div>
+        </motion.div>
+
+        <h2 className="projects-subtitle">Mobile Applications</h2>
+        <motion.div 
+          variants={staggerContainer()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true, amount:0.25}}>
+            <motion.div variants={fadeIn("right", "spring", 0.5, 1.5)}>
+
+              <Iframe url="https://play.google.com/store/apps/details?id=com.fotbal.predictions"
+                width="100%"
+                height="400px"
+                id=""
+                className="iframe"
+                display="block"
+                position="relative"
+                />
+
+              </motion.div>
+        </motion.div>
+
+        <h2 className="projects-subtitle">3d Animations</h2>
+        <motion.div 
+          variants={staggerContainer()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true, amount:0.25}}
+          className="video-container">
+              <motion.div
+                variants={fadeIn("right", "spring", 0.5, 1.5)}>
+                <video autoPlay={true} muted={true} loop={true} className="video-animation" style={isMobile ? {width: "100%"} : {width: "70%"}}>
+                  <source src={VideoAnimation} type="video/mp4" />
+                </video>
+              </motion.div>
+        </motion.div>
+
+        <h2 className="projects-subtitle" style={{textAlign:"center", marginLeft:0}}><a href="/work" rel="noreferrer" className="see-work-page-anchor">See Work Page</a> for more projects</h2>
+
+        <h1 className="projects-title">Prices.</h1>
+        <h2 className="price-text">
+          The price varies depending on your requirements. <br/><br/>
+          For websites, it depends on how many pages the site should have or how many 3D models, as for mobile applications, is depends on the complexity, if it should be compatible with both iOS or Android.  <br/><br/>
+          You can make yourself an idea of the price by going to <a href="/prices" rel="noreferrer" className="see-work-page-anchor">Price Page</a> and calculate a relative price or send me an email using the <a href="/contact" rel="noreferrer" className="see-work-page-anchor">Contact Page</a>
+        </h2>
 
           <div className="footer">
           </div>

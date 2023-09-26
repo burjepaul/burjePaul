@@ -74,4 +74,55 @@
     margin-left: auto;
     margin-right:auto;
   }
+
+  .projects-title{
+    color: var(--color-title);
+    font-family: "Amiri";
+    font-size: var(--step-5);
+    margin-left: 25%;
+    margin-top: 10rem;
+    text-shadow: var(--color-paragraph) 1px 0 10px;   
+  }
+
+  .projects-subtitle{
+    color: var(--color-title);
+    font-family: "Amiri";
+    font-size: var(--step-3);
+    margin-left: 25%;
+    margin-top: 1rem;
+    text-shadow: var(--color-paragraph) 1px 0 10px;   
+  }
+
+  .iframe{
+    width: 70%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .video-container{
+
+    .video-animation{
+      max-width: 1200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .see-work-page-anchor{
+    color:var(--color-paragraph)
+  }
+
+  .price-text{
+    color: var(--color-title);
+    width: 70%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Amiri";
+    font-size: var(--step-3);
+    margin-top: 1rem;
+    text-shadow: var(--color-paragraph) 1px 0 10px;   
+  }
 }
