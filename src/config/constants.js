@@ -20,3 +20,66 @@ export const overviewCards = [
         descriptions: ['Web Scrapers', 'Software Automations', "REST API's"]
     },
 ]
+
+export const technologys = [
+    {
+        name:"React",
+        imgSource: "react-logo"
+    },
+    {
+        name:"JavaScript",
+        imgSource: "JavaScript-logo"
+    },
+    {
+        name:"HTML",
+        imgSource: "html-logo"
+    },
+    {
+        name:"CSS",
+        imgSource: "css-logo"
+    },
+    {
+        name:"SASS",
+        imgSource: "sass-logo"
+    },
+    {
+        name:"React Native",
+        imgSource: "react-native-logo"
+    },
+    {
+        name:"Blender",
+        imgSource: "blender-logo"
+    },
+    {
+        name:"3Ds Max",
+        imgSource: "3ds-max-logo"
+    },
+    {
+        name:"Photoshop",
+        imgSource: "photoshop-logo"
+    },
+    {
+        name:"Three.js",
+        imgSource: "threejs-logo"
+    },
+    {
+        name:"Python",
+        imgSource: "python-logo"
+    },
+    {
+        name:"Selenium",
+        imgSource: "selenium-logo"
+    },
+    {
+        name:"NumPy",
+        imgSource: "numpy-logo"
+    },
+    {
+        name:"Pandas",
+        imgSource: "pandas-logo"
+    },
+    {
+        name:"Django",
+        imgSource: "django-logo"
+    },
+]

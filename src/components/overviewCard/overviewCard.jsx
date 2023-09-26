@@ -26,11 +26,13 @@ const OverviewCard = ({title, images, description, index}) => {
                                 )})}
                     </div>
 
-                    {description.map((entry) => {
-                        return(
-                            <p className="overview-text" key={entry}>- {entry}</p>
-                            )
-                        })}
+                    <ul>
+                        {description.map((entry) => {
+                            return(
+                                <li className="overview-text" key={entry}>{entry}</li>
+                                )
+                            })}
+                    </ul>
             </motion.div>
         </Tilt>
     )

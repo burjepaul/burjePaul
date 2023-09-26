@@ -4,7 +4,7 @@ import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 import './homePage.styles.scss'
-import { overviewCards } from "../../config/constants";
+import { overviewCards, technologys } from "../../config/constants";
 import Phone3D from "../../components/3dComponents/MobilePhone";
 import Monitor3D from "../../components/3dComponents/Monitor";
 import Loader from "../../components/Loader/Loader";
@@ -12,6 +12,7 @@ import Rendering from "../../components/3dComponents/3dRendering";
 import { HandleMobilesize, staggerContainer } from "../../config/helpers";
 import Scroller from "../../components/Scroller/scroller";
 import OverviewCard from "../../components/overviewCard/overviewCard";
+import TechnologyCard from "../../components/technologyCard/technology";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -55,7 +56,7 @@ const HomePage = () => {
           whileInView="show"
           viewport={{once: true, amount:0.25}}
           className="overview-container">
-            <h1 className="overview-title">Overview</h1>
+            <h1 className="overview-title">Overview.</h1>
             <div 
               style={isMobile ? {gridTemplateColumns: "100%"} : {gridTemplateColumns: "50% 50%"}}
               className="overview-card-container">
@@ -65,6 +66,21 @@ const HomePage = () => {
                   )
                 })}
             </div>
+        </motion.div>
+        
+        <h1 className="technology-title">Technologies.</h1>
+        <motion.div 
+          variants={staggerContainer()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true, amount:0.25}}
+          style={isMobile ? {gridTemplateColumns: "50% 50%"} : {gridTemplateColumns: "20% 20% 20% 20% 20%"}}
+          className="technology-container">
+            {technologys.map((entry, index) => {
+                  return(
+                    <TechnologyCard values={entry} index={index} key={index}/>
+                  )
+                })}
         </motion.div>
 
           <div className="footer">
