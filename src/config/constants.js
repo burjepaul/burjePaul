@@ -83,3 +83,26 @@ export const technologys = [
         imgSource: "django-logo"
     },
 ]
+
+export const websites = [
+    {
+        title: "The Oracle",
+        link: "https://fotbal-predictions.netlify.app",
+        descriptions: ["Build in ReactJS SASS and ThreeJS", "Fetch data from an API", "Over 15 web pages", "Integrated with custom 3D Models and 3D Videos"]
+    },
+    {
+        title: "IronCraft",
+        link: "https://ironcraft.netlify.app",
+        descriptions: ["Build in ReactJS and SASS", "Presentational website", "Integrated with custom 3D Models and 3D Videos"]
+    },
+    {
+        title: "Movies",
+        link: "https://movies-with-ziuca.netlify.app",
+        descriptions: ["Build in ReactJS", "Fetch data from an API"]
+    },
+    {
+        title: "OviOS",
+        link: "https://saschiz.netlify.app",
+        descriptions: ["Build in JavaScript HTML and CSS", "Over 15 web pages", "Integrated with custom 3D Models and 3D Videos"]
+    },
+]

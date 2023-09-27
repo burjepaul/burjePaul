@@ -1,0 +1,27 @@
+.website-card-container{
+    box-shadow: 0px 0px 25px 0px var(--color-paragraph);
+    background-image: linear-gradient(var(--color-background), var(--color-title));
+    border-radius: 3%;
+    width: 40rem;
+    height: 40rem;
+    padding: 5% 0%;
+
+    .website-card-title{
+        color: var(--color-title);
+        font-family: "Amiri";
+        font-size: var(--step-3);
+        text-align: center;
+        text-shadow: var(--color-paragraph) 1px 0 10px;   
+    }
+
+    .website-card-frame{
+        transform: scale(0.94);
+    }
+
+    .website-card-descriptions-container{
+        color: var(--color-heading);
+        font-size: var(--step-2);
+        margin-left: 3rem;
+        font-family: "Amiri";
+    }
+}
