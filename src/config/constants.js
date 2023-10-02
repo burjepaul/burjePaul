@@ -119,3 +119,18 @@ export const mobileApps = [
         descriptions: ["Build using React Native", "Use satelite maps", "Compatible for both, iOS and Android (not available on devices not supported by Google Services)", "Uses a JSON file which serves as a local DataBase"]
     }
 ]
+
+export const otherApps = [
+    {
+        title: "Web Scrapers and Web Automations",
+        descriptions: ["Web Scrapers and Web Automations using Python's librarie Selenium","Extract Data from Websites", "Automate web tasks(pressing buttons, fill input field, etc... )"]
+    },
+    {
+        title: "Software Automations (Data Analysis in Excel)",
+        descriptions: ["Data Analysis with NumPy and Pandas", "Complex calculations over 1000 Excel rows", "Automate pushing data in DataBase"]
+    },
+    {
+        title: "Backend Services",
+        descriptions: ["Created MySQL DataBase", "Build REST API", "Hosted both, DB and API Online", "Connect the Backend Servet to FrontEnd Application"]
+    },
+]

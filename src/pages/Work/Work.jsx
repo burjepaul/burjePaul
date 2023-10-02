@@ -3,7 +3,7 @@ import React from "react";
 import './Work.styles.scss'
 
 import CarouselComponent from "../../components/carouselComponent/carouselComponent";
-import { websites, mobileApps } from "../../config/constants";
+import { websites, mobileApps, otherApps } from "../../config/constants";
 
 const WorkPage = () => {
 
@@ -24,6 +24,11 @@ const WorkPage = () => {
                 Mobile Applications
             </h2>
             <CarouselComponent mobileData={mobileApps}/>
+
+            <h2 className="work-page-subtitle">
+                Other Applications
+            </h2>
+            <CarouselComponent otherData={otherApps}/>
 
         </div>
     )

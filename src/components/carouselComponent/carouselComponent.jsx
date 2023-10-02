@@ -6,8 +6,9 @@ import 'react-multi-carousel/lib/styles.css'
 import './carouselComponent.styles.scss'
 import PortofolioWebsiteCard from '../portofolioWebsiteCard/portofolioWebsiteCard'
 import PortofolioMobileCard from '../portofolioMobileCard/portofolioMobileCard'
+import PortofolioOthersCard from '../portofolioOthersCard/portofolioWebsiteCard'
 
-function CarouselComponent({websiteData , mobileData}) {
+function CarouselComponent({websiteData , mobileData, otherData}) {
   console.log(websiteData)
     const responsiveWebsite = {
         superLargeDesktop: {
@@ -50,6 +51,24 @@ function CarouselComponent({websiteData , mobileData}) {
                       return(
                         <div className='items-container'>
                                 <PortofolioWebsiteCard value={entry}/>
+                            </div>
+                            )
+                          })}
+            </Carousel>
+        </div>
+      )}
+
+      if (otherData){
+        return(
+          <div className='carousel-container'>
+            <Carousel 
+                responsive={responsiveWebsite}
+                infinite={true}
+                >
+                    {otherData.map((entry) => {
+                      return(
+                        <div className='items-container'>
+                                <PortofolioOthersCard value={entry}/>
                             </div>
                             )
                           })}
