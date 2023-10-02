@@ -106,3 +106,16 @@ export const websites = [
         descriptions: ["Build in JavaScript HTML and CSS", "Over 15 web pages", "Integrated with custom 3D Models and 3D Videos"]
     },
 ]
+
+export const mobileApps = [
+    {
+        title: "The Oracle",
+        videoLink: "bUAc8_6_bSg",
+        descriptions: ["Build using React Native", "Compatible for both, iOS and Android", "Fetch data from an API", "Over 15 pages", "Integrated with custom 3D Videos", "Available on Google Play here", "Available on App Gallery here"]
+    },
+    {
+        title: "Visit Saschiz",
+        videoLink: "kUT18L91DX0",
+        descriptions: ["Build using React Native", "Use satelite maps", "Compatible for both, iOS and Android (not available on devices not supported by Google Services)", "Uses a JSON file which serves as a local DataBase"]
+    }
+]
