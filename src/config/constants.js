@@ -134,3 +134,20 @@ export const otherApps = [
         descriptions: ["Created MySQL DataBase", "Build REST API", "Hosted both, DB and API Online", "Connect the Backend Servet to FrontEnd Application"]
     },
 ]
+
+export const prices = {
+    website: 149,
+    website_page: 34,
+    website_3d_model: 69,
+    website_logo_design: 69,
+    mobile_app: 899,
+    mobile_app_page: 299,
+    mobile_app_3d_model: 199,
+    mobile_app_android_ios: 299,
+    mobile_app_publish: 89,
+    models_basic: 69,
+    models_high_complexity: 299,
+    web_scrapers:99,
+    excel_automations:99,
+    backend_mysql: 499
+}
