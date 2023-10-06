@@ -310,7 +310,7 @@ const PricePage = () => {
                         </span>
                     </label>
                     <label className="form-label">
-                        Excel Automations
+                        Excel Automation
                         <span>
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.excel_automation} onChange={(e) => {dispatch({type:ACTION_TYPES.change_excel_automation, value:e.target.checked})}}/>
                         </span>
@@ -326,6 +326,13 @@ const PricePage = () => {
 
 
                 <h1 className="price-text">Price {price}$</h1>
+                {state.web_scraper || state.excel_automation || state.backend_mysql ? 
+                <h1 className="others-text price-text">For "Others" services the price may vary depending of your requirement.</h1>
+                :null}
+            </div>
+            <div className="eta-container">
+                    <h1 className="eta-text">For websites, the estimated building time should be around 3 days, and one day for each page/3d model.</h1>
+                    <h1 className="eta-text">For mobile apps, I cannot give an estimeted time, it can vary between a week and mounths.</h1>
             </div>
         </div>
     )

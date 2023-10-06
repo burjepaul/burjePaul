@@ -137,7 +137,7 @@ export const otherApps = [
 
 export const prices = {
     website: 149,
-    website_page: 34,
+    website_page: 49,
     website_3d_model: 69,
     website_logo_design: 69,
     mobile_app: 899,
