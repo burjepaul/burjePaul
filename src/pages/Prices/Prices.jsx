@@ -327,7 +327,7 @@ const PricePage = () => {
 
                 <h1 className="price-text">Price {price}$</h1>
                 {state.web_scraper || state.excel_automation || state.backend_mysql ? 
-                <h1 className="others-text price-text">For "Others" services the price may vary depending of your requirement.</h1>
+                <h1 className="others-text price-text">For "Others" services, price may vary depending of your requirements.</h1>
                 :null}
             </div>
             <div className="eta-container">
