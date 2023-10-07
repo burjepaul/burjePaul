@@ -15,6 +15,7 @@ import Scroller from "../../components/Scroller/scroller";
 import OverviewCard from "../../components/overviewCard/overviewCard";
 import TechnologyCard from "../../components/technologyCard/technology";
 import VideoAnimation from '../../assets/LogoVideo.mp4'
+import MobilePhone from '../../assets/Mobile-photo.png'
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -113,15 +114,9 @@ const HomePage = () => {
           whileInView="show"
           viewport={{once: true, amount:0.25}}>
             <motion.div variants={fadeIn("right", "spring", 0.5, 1.5)}>
-
-              <Iframe url="https://play.google.com/store/apps/details?id=com.fotbal.predictions"
-                width="100%"
-                height="400px"
-                id=""
-                className="iframe"
-                display="block"
-                position="relative"
-                />
+                <div className="project-image-container">
+                  <img src={MobilePhone} className="project-mobile-image" alt="mobile-phone"/>
+                </div>
 
               </motion.div>
         </motion.div>

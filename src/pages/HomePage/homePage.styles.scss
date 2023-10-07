@@ -58,12 +58,22 @@
     }
   }
 
+  .project-image-container{
+    display: flex;
+    justify-content: center;
+    
+    .project-mobile-image{
+      height: 50rem;
+      width: auto;
+    }
+  }
+
   .technology-title{
     color: var(--color-title);
     font-family: "Amiri";
     font-size: var(--step-5);
     margin-left: 25%;
-    margin-top: 20%;
+    margin-top: 5%;
     text-shadow: var(--color-paragraph) 1px 0 10px;
   }
   .technology-container{
@@ -80,7 +90,7 @@
     font-family: "Amiri";
     font-size: var(--step-5);
     margin-left: 25%;
-    margin-top: 20%;
+    margin-top: 5%;
     text-shadow: var(--color-paragraph) 1px 0 10px;   
   }
 
@@ -124,5 +134,24 @@
     font-size: var(--step-3);
     margin-top: 1rem;
     text-shadow: var(--color-paragraph) 1px 0 10px;   
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .page-container{
+    .technology-title{
+      margin-top: 20%;
+    }
+    .projects-title{
+      margin-top: 20%;
+    }
+
+    .project-image-container{
+      
+      .project-mobile-image{
+        height: 25rem;
+      }
+    }
   }
 }
