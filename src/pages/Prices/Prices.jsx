@@ -21,7 +21,9 @@ const PricePage = () => {
         if (state.model_high_complexity) calculatedPrice += prices.models_high_complexity
         if (state.website_logo_design) calculatedPrice += prices.website_logo_design
         
-        calculatedPrice += parseInt(state.mobile_app_3d_models) * prices.mobile_app_3d_model + parseInt(state.website_3d_models) * prices.website_3d_model
+
+        if (state.mobile_app_3d_models) calculatedPrice += parseInt(state.mobile_app_3d_models) * prices.mobile_app_3d_model
+        if (state.website_3d_models) calculatedPrice += parseInt(state.website_3d_models) * prices.website_3d_model
 
         if (state.mobile_app_pages === '1') calculatedPrice += prices.mobile_app
         else if (state.mobile_app_pages >= 1) calculatedPrice += (parseInt(state.mobile_app_pages - 1)) * prices.mobile_app_page + prices.mobile_app
@@ -49,11 +51,11 @@ const PricePage = () => {
     
     
     const INITIAL_VALUES = {
-        website_pages: 0,
-        website_3d_models: 0,
+        website_pages: null,
+        website_3d_models: null,
         website_logo_design: false,
-        mobile_app_pages: 0,
-        mobile_app_3d_models: 0,
+        mobile_app_pages: null,
+        mobile_app_3d_models: null,
         mobile_app_android_ios: false,
         mobile_app_publish: false,
         model_basic: false,
@@ -251,7 +253,7 @@ const PricePage = () => {
                     </label>
                     <label className="form-label">
                         Logo Design
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.website_logo_design} onChange={(e) => {dispatch({type:ACTION_TYPES.change_website_logo_desing, value:e.target.checked})}}/>
                         </span>
                     </label>
@@ -268,15 +270,15 @@ const PricePage = () => {
                         Number of 3D Models
                         <input className="number-input" type="number" name="name" value={state.mobile_app_3d_models} onChange={(e) => {dispatch({type:ACTION_TYPES.change_mobile_app_3d_models, value:e.target.value})}}/>
                     </label>
-                    <label className="form-label">
+                    <label className="form-label" style={{marginRight:"5%"}}>
                         Android+iOS
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.mobile_app_android_ios} onChange={(e) => {dispatch({type:ACTION_TYPES.change_mobile_app_android_ios, value:e.target.checked})}}/>
                         </span>
                     </label>
                     <label className="form-label">
                         Publish
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.mobile_app_publish} onChange={(e) => {dispatch({type:ACTION_TYPES.change_mobile_app_publish, value:e.target.checked})}}/>
                         </span>
                     </label>
@@ -287,13 +289,13 @@ const PricePage = () => {
                     <p className="form-service">3d Models:</p>
                     <label className="form-label">
                         Basic
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.model_basic} onChange={(e) => {dispatch({type:ACTION_TYPES.change_model_basic, value:e.target.checked})}}/>
                         </span>
                     </label>
                     <label className="form-label">
                         Higher Complexity
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.model_high_complexity} onChange={(e) => {dispatch({type:ACTION_TYPES.change_model_high_complexity, value:e.target.checked})}}/>
                         </span>
                     </label>
@@ -305,19 +307,19 @@ const PricePage = () => {
                     <p className="form-service">Others:</p>
                     <label className="form-label">
                         Web Scraper
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.web_scraper} onChange={(e) => {dispatch({type:ACTION_TYPES.change_web_scraper, value:e.target.checked})}}/>
                         </span>
                     </label>
                     <label className="form-label">
                         Excel Automation
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.excel_automation} onChange={(e) => {dispatch({type:ACTION_TYPES.change_excel_automation, value:e.target.checked})}}/>
                         </span>
                     </label>
                     <label className="form-label">
                         Backend + MySQL Database
-                        <span>
+                        <span className="checkbox-input">
                             <input className="checkbox-input" type="checkbox" name="name" checked={state.backend_mysql} onChange={(e) => {dispatch({type:ACTION_TYPES.change_backend_mysql, value:e.target.checked})}}/>
                         </span>
                     </label>
