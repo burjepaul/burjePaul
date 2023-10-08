@@ -123,14 +123,17 @@ export const mobileApps = [
 export const otherApps = [
     {
         title: "Web Scrapers and Web Automations",
+        videoLink: "GkWBgxixesE",
         descriptions: ["Web Scrapers and Web Automations using Python's librarie Selenium","Extract Data from Websites", "Automate web tasks(pressing buttons, fill input field, etc... )"]
     },
     {
         title: "Software Automations (Data Analysis in Excel)",
+        videoLink: "fzN03S_M57Y",
         descriptions: ["Data Analysis with NumPy and Pandas", "Complex calculations over 1000 Excel rows", "Automate pushing data in DataBase"]
     },
     {
         title: "Backend Services",
+        videoLink: "YeSCcu8XR4k",
         descriptions: ["Created MySQL DataBase", "Build REST API", "Hosted both, DB and API Online", "Connect the Backend Servet to FrontEnd Application"]
     },
 ]

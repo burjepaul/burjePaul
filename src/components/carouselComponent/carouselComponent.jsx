@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css'
 import './carouselComponent.styles.scss'
 import PortofolioWebsiteCard from '../portofolioWebsiteCard/portofolioWebsiteCard'
 import PortofolioMobileCard from '../portofolioMobileCard/portofolioMobileCard'
-import PortofolioOthersCard from '../portofolioOthersCard/portofolioWebsiteCard'
+import PortofolioOthersCard from '../portofolioOthersCard/portofolioOtherCard'
 
 function CarouselComponent({websiteData , mobileData, otherData}) {
   console.log(websiteData)
