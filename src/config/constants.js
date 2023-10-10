@@ -82,6 +82,10 @@ export const technologys = [
         name:"Django",
         imgSource: "django-logo"
     },
+    {
+        name:"SQL",
+        imgSource: "sql-logo"
+    },
 ]
 
 export const websites = [
