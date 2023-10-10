@@ -18,7 +18,6 @@ const ContactPage = () => {
     };
 
     const [validData, setValidData] = useState(true)
-    const [messageSent, setMessageSent] = useState(false)
 
     const initalValues ={
         name: "",
@@ -179,7 +178,6 @@ const ContactPage = () => {
             type: ACTION_TYPES.CHANGE_NAME,
             newNameValue: ''
         })
-        setMessageSent(true)
     }
     return(
         <div className="circle">
@@ -191,7 +189,7 @@ const ContactPage = () => {
                 e.preventDefault()
                 validateData()
                 if(validData){
-                    // sendEmail()
+                    sendEmail()
                     clearFields()
                 }   
             }}>
