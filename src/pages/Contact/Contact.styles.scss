@@ -1,0 +1,90 @@
+.circle{
+    width: 65%;
+
+    position: absolute;
+    margin: 15% 15%;
+    border: solid 1rem var(--color-title);
+    box-shadow: 0px 0px 15px 1px var(--color-paragraph);
+    border-radius: 100%;
+    .form-component{
+
+        font-size: var(--step-2);
+        text-align: center;
+    
+        .form-group-name{
+            color: var(--color-title);
+            display: block;
+    
+            label{
+                display: block;
+                font-size: var(--step-3);
+            }
+    
+            input{
+                margin-bottom: 1rem;
+                background-color: var(--color-title);
+                padding: 1rem;
+                width: 50%;
+            }
+            
+            textarea{
+                padding: 1rem;
+                background-color: var(--color-title);
+                width: 50%;
+                height: 15vh;
+            }
+        }
+    
+        .submit-contact{
+            width: fit-content;
+            font-size: var(--step-2);
+            border-radius: 15%;
+            border: none;
+            white-space: nowrap; 
+            display: block;
+            margin: 5% auto;
+            padding: 2% 3%;
+            background-color: var(--color-title);
+            box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
+            p{
+                margin: 3% 0% 0%;
+            }
+        }
+        .submit-contact:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    .title{
+        color: var(--color-title);
+        font-family: "Amiri";
+        font-size: var(--step-5);
+        width: 100%;
+        text-align: center;
+        text-shadow: var(--color-paragraph) 1px 0 10px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .circle{
+        width: 90%;
+        margin: 25% auto;
+
+        .form-component{
+            .form-group-name{
+    
+                input{
+                    margin-bottom: 1rem;
+                    background-color: var(--color-title);
+                    padding: 1rem;
+                    width: 60%;
+                }
+                
+                textarea{
+                width: 60%;
+            }
+        }
+    }
+}
+}
