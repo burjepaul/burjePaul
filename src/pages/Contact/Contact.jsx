@@ -10,7 +10,6 @@ const ContactPage = () => {
     const year = fullDate.getFullYear();
     const day = fullDate.getDate();
     const currentDate = month + "/" + day + "/" + year;
-    console.log(currentDate)
 
     const sendEmail = (e) => {
       emailjs.sendForm('service_emvnbab', 'template_nljbpov', form.current, 'dWdldUeQp-bwHTTqj')
@@ -163,12 +162,11 @@ const ContactPage = () => {
             })
         }
         const date = JSON.parse(localStorage.getItem('date'));
-        console.log(date)
         if(currentDate !== date){
             localStorage.setItem('date', JSON.stringify(currentDate));
             setValidData(2) 
             clearFields()
-            // sendEmail()
+            sendEmail()
         }
         else setValidData(3)
     }
