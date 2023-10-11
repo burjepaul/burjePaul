@@ -5,10 +5,14 @@ import './Contact.styles.scss'
 const ContactPage = () => {
     const form = useRef();
 
-    console.log(window)
+    const fullDate = new Date()
+    const month = fullDate.getMonth()+1;
+    const year = fullDate.getFullYear();
+    const day = fullDate.getDate();
+    const currentDate = month + "/" + day + "/" + year;
+    console.log(currentDate)
 
     const sendEmail = (e) => {
-  
       emailjs.sendForm('service_emvnbab', 'template_nljbpov', form.current, 'dWdldUeQp-bwHTTqj')
         .then((result) => {
             console.log(result.text);
@@ -17,7 +21,7 @@ const ContactPage = () => {
         });
     };
 
-    const [validData, setValidData] = useState(true)
+    const [validData, setValidData] = useState(0)
 
     const initalValues ={
         name: "",
@@ -117,7 +121,7 @@ const ContactPage = () => {
                         newEmailColor: 'red'
                     })
                 
-                setValidData(false)
+                setValidData(1)
                 return
             }
         else {
@@ -133,7 +137,7 @@ const ContactPage = () => {
                     newPhoneColor: 'red'
                 })
             }
-            setValidData(false)
+            setValidData(1)
             return
         }
         else {
@@ -149,7 +153,7 @@ const ContactPage = () => {
                     newMessageColor: 'red'
                 })
             }
-            setValidData(false)
+            setValidData(1)
             return
         }
         else {
@@ -158,7 +162,15 @@ const ContactPage = () => {
                 newMessageColor: 'black'
             })
         }
-        setValidData(true) 
+        const date = JSON.parse(localStorage.getItem('date'));
+        console.log(date)
+        if(currentDate !== date){
+            localStorage.setItem('date', JSON.stringify(currentDate));
+            setValidData(2) 
+            clearFields()
+            // sendEmail()
+        }
+        else setValidData(3)
     }
 
     const clearFields = () => {
@@ -179,6 +191,15 @@ const ContactPage = () => {
             newNameValue: ''
         })
     }
+
+    const message = () => {
+        if (validData === 0) return  ""
+        if (validData === 1) return  <p style={{color:"red"}}>Something is wrong, check again!</p>
+        if (validData === 2) return  <p style={{color:"red"}}>Message sent!</p> 
+        if (validData === 3) return  <p style={{color:"red", width:"50%", marginLeft:"auto", marginRight:"auto"}}>I received your previous message, due to spam avoidance, you are limited to only one message per day.</p> 
+
+    }
+
     return(
         <div className="circle">
 
@@ -188,10 +209,6 @@ const ContactPage = () => {
             <form className='form-component' ref={form} onSubmit={(e) => {
                 e.preventDefault()
                 validateData()
-                if(validData){
-                    sendEmail()
-                    clearFields()
-                }   
             }}>
                 <div className="form-group-name">
                     <label>NAME:</label>
@@ -203,19 +220,9 @@ const ContactPage = () => {
                     <label>MESSAGE:</label>
                     <textarea placeholder='Your message (min 50 characters) *' name="message" value={state.message} style={{color:state.messagecolor}} onChange={handleMessageChange}/>
                 </div>
-                {
-                (validData) ?
-                    <p style={{color:"red"}}>Message sent!</p> 
-                    :
-                    <p style={{color:"red"}}>Something is wrong, check again!</p>
-                }
 
-                {/* {
-                (messageSent) ? 
-                    <p style={{color:"red"}}>Message sent!</p> 
-                    :
-                    ''
-                } */}
+                {message()}
+
                 <button className='submit-contact'>Send</button>
             </form>
         </div>
