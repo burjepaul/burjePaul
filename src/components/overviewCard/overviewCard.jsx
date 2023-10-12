@@ -6,10 +6,13 @@ import { motion } from "framer-motion";
 import './overviewCard.styles.scss'
 import { fadeIn } from "../../config/helpers";
 
-const OverviewCard = ({title, images, description, index}) => {
+const OverviewCard = ({title, images, description, index, handleClick}) => {
+
+
     return(
         <Tilt>
             <motion.div
+                onClick={() => {handleClick(title)}}
                 variants={fadeIn("down", "spring", 0.25 * index, 0.75)}
                 className="overview-card">
                     <h2 className="overview-card-title">{title}</h2>

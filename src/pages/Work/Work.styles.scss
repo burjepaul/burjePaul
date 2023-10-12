@@ -4,6 +4,12 @@
     margin-left: auto;
     margin-right: auto;
     
+    .work-card-container{
+        display: grid;
+        width: 100%;
+        grid-row-gap: 4rem;
+    }
+
     .work-page-title{
         color: var(--color-title);
         font-family: "Amiri";
@@ -21,4 +27,17 @@
         text-shadow: var(--color-paragraph) 1px 0 10px;
     }
     
+    .work-carousel{
+        margin: 8% 0%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .work-page-container{
+        .work-card-container{
+            display: grid;
+            width: 80%;
+            grid-row-gap: 4rem;
+        }
+    }
 }
