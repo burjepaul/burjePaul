@@ -124,6 +124,25 @@ export const mobileApps = [
     }
 ]
 
+export const videosAndRenders = [
+    {
+        title: "IronCraft Logo",
+        videoLink: "ZckeCg5PtFA",
+    },
+    {
+        title: "The Oracle - First Logo",
+        videoLink: "9oWa5c436zw",
+    },
+    {
+        title: "The Oracle - Second Logo",
+        videoLink: "9oWa5c436zw",
+    },
+    {
+        title: "The Oracle - Ball System",
+        videoLink: "PE_aaAbmCDQ",
+    },
+]
+
 export const otherApps = [
     {
         title: "Web Scrapers and Web Automations",

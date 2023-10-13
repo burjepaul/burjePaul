@@ -334,7 +334,11 @@ const PricePage = () => {
             </div>
             <div className="eta-container">
                     <h1 className="eta-text">For websites, the estimated building time should be around 3 days, and one day for each page/3d model.</h1>
-                    <h1 className="eta-text">For mobile apps, I cannot give an estimeted time, it can vary between a week and months.</h1>
+                    <h1 className="eta-text">For mobile apps, it can vary between a week and months.</h1>
+            </div>
+            <div className="eta-container" style={{marginTop:"-7%"}}>
+                    <h1 className="eta-text">If you are happy with the estimative price, the next step is to send me a message via the contact page (one message per day) and ask me for a quotation.</h1>
+                    <h1 className="eta-text">After this, we'll setup a meeting and discuss all the details.</h1>
             </div>
         </div>
     )

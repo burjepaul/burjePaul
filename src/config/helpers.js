@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export const HandleMobilesize = (setIsMobile) => {
     useEffect(() => {
@@ -36,9 +36,9 @@ export const fadeIn = (direction, type, delay, duration) => {
         },
       },
     };
-  };
+};
 
-  export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (staggerChildren, delayChildren) => {
     return {
       hidden: {},
       show: {
@@ -48,4 +48,26 @@ export const fadeIn = (direction, type, delay, duration) => {
         },
       },
     };
-  };
+};
+
+export const GetPositionOfanElementInPage = (divRef) => {
+  const [divPosition, setDivPosition] = useState({ bottom: 0, top: 0 });
+  useEffect(() => {
+      const updatePosition = () => {
+          if (divRef.current) {
+            const { bottom, top } = divRef.current.getBoundingClientRect();
+            setDivPosition({ bottom, top });
+          }
+        };
+      updatePosition();
+      // Optionally, you can also listen for window resize events to update the position dynamically
+      window.addEventListener('scroll', updatePosition);
+      window.addEventListener('resize', updatePosition);
+      return () => {
+          window.removeEventListener('scroll', updatePosition);
+          window.removeEventListener('resize', updatePosition);
+      };
+    }, [divRef]);
+
+    return divPosition
+}

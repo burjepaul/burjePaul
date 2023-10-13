@@ -7,8 +7,9 @@ import './carouselComponent.styles.scss'
 import PortofolioWebsiteCard from '../portofolioWebsiteCard/portofolioWebsiteCard'
 import PortofolioMobileCard from '../portofolioMobileCard/portofolioMobileCard'
 import PortofolioOthersCard from '../portofolioOthersCard/portofolioOtherCard'
+import Portofolio3DCard from '../portofolio3DCard/portofolio3DCard'
 
-function CarouselComponent({websiteData , mobileData, otherData}) {
+function CarouselComponent({websiteData , mobileData, otherData, videoAndRenders}) {
   console.log(websiteData)
     const responsiveWebsite = {
         superLargeDesktop: {
@@ -87,6 +88,25 @@ function CarouselComponent({websiteData , mobileData, otherData}) {
                       return(
                             <div className='items-container'>
                                 <PortofolioMobileCard value={entry}/>
+                            </div>
+                            )
+                          })}
+            </Carousel>
+      </div>
+        )
+      }
+
+      if (videoAndRenders){
+        return(
+          <div className='carousel-container'>
+            <Carousel 
+                responsive={responsiveMobile}
+                infinite={true}
+                >
+                    {videoAndRenders.map((entry) => {
+                      return(
+                            <div className='items-container'>
+                                <Portofolio3DCard value={entry}/>
                             </div>
                             )
                           })}

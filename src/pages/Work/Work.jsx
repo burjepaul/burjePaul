@@ -1,18 +1,26 @@
-import React, { useState } from "react";
-
+import React, {useRef, useState } from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import './Work.styles.scss'
 
 import CarouselComponent from "../../components/carouselComponent/carouselComponent";
-import { websites, mobileApps, otherApps } from "../../config/constants";
+import { websites, mobileApps, otherApps, videosAndRenders } from "../../config/constants";
 import OverviewCard from "../../components/overviewCard/overviewCard";
-import { HandleMobilesize } from "../../config/helpers";
+import { GetPositionOfanElementInPage, HandleMobilesize } from "../../config/helpers";
 
 const WorkPage = () => {
     const [isMobile, setIsMobile] = useState(false)
     const [carouselToShow, setCarouselToShow] = useState(null)
 
-
+    
+    const elementRef = useRef(null);
+    
     HandleMobilesize(setIsMobile)
+    
+    const height = GetPositionOfanElementInPage(elementRef)
+
+    const scrollTo = () => {
+        scroll.scrollTo(height.top + height.bottom);
+      };
 
     const renderCarousel = () => {
         switch(carouselToShow){
@@ -38,9 +46,9 @@ const WorkPage = () => {
                 return (
                     <>
                         <h2 className="work-page-subtitle">
-                            Mobile Applications
+                            3D Animations
                         </h2>
-                        <CarouselComponent mobileData={mobileApps}/>
+                        <CarouselComponent videoAndRenders={videosAndRenders}/>
                     </>
                 )
             case 'Others':
@@ -66,16 +74,18 @@ const WorkPage = () => {
 
             <div 
             style={isMobile ? {gridTemplateColumns: "100%"} : {gridTemplateColumns: "50% 50%"}}
-            className="work-card-container">
+            className="work-card-container"
+            onClick={() => {scrollTo()}}
+            >
 
-                <OverviewCard handleClick={setCarouselToShow} title={"Websites"} images={['website1', 'website2']} description={['Custom websites with personalizate logos, 3d Videos, 3d Models, mobile responsive.']}/>
-                <OverviewCard handleClick={setCarouselToShow} title={"Mobile Applications"} images={['mobile1', 'mobile2']} description={['Mobile applications published on Google Play and App Gallery, compatible with both iOS and Android.']}/>
-                <OverviewCard handleClick={setCarouselToShow} title={"3d Projects"} images={['3d-modeling1', '3d-modeling2']} description={['3D Models and Videos custom made with advance textures.']}/>
-                <OverviewCard handleClick={setCarouselToShow} title={"Others"} images={['others1', 'others2']} description={['Backend servers, web scrapers, automations and others services.']}/>
+                <OverviewCard handleClick={setCarouselToShow} title={"Websites"} images={['website1', 'website2']} description={['Custom websites with personalizate logos, 3d Videos, 3d Models, mobile responsive.']} index={10}/>
+                <OverviewCard handleClick={setCarouselToShow} title={"Mobile Applications"} images={['mobile1', 'mobile2']} description={['Mobile applications published on Google Play and App Gallery, compatible with both iOS and Android.']} index={11}/>
+                <OverviewCard handleClick={setCarouselToShow} title={"3d Projects"} images={['3d-modeling1', '3d-modeling2']} description={['3D Models and Videos custom made with advance textures.']} index={12}/>
+                <OverviewCard handleClick={setCarouselToShow} title={"Others"} images={['others1', 'others2']} description={['Backend servers, web scrapers, automations and others services.']} index={13}/>
 
             </div>
 
-            <div className="work-carousel">
+            <div className="work-carousel" ref={elementRef}>
                 {renderCarousel()}
             </div>
 

@@ -8,13 +8,14 @@ import { fadeIn } from "../../config/helpers";
 
 const OverviewCard = ({title, images, description, index, handleClick}) => {
 
-
     return(
         <Tilt>
             <motion.div
-                onClick={() => {handleClick(title)}}
+                onClick={() => {
+                    if(index > 10) handleClick(title)}}
                 variants={fadeIn("down", "spring", 0.25 * index, 0.75)}
-                className="overview-card">
+                className="overview-card"
+            >
                     <h2 className="overview-card-title">{title}</h2>
 
                     <div className="images-container">
