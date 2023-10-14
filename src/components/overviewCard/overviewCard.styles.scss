@@ -1,7 +1,8 @@
 .overview-card{
-    width: 70%;
+    width: 85%;
     height: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 3%;
     box-shadow: 0px 0px 15px 1px var(--color-paragraph);
     background-image: linear-gradient(var(--color-background), var(--color-title));
@@ -28,7 +29,9 @@
 
     .overview-text{
       color:var(--color-heading);
-      width: 80%;
-      margin: 4% auto;
+      width: 100%;
+      margin: 2% auto;
+      font-family:'Amiri','Droid Sans', 'Helvetica Neue',
+    sans-serif;
     }
   }
