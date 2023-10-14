@@ -5,7 +5,7 @@ import './Work.styles.scss'
 import CarouselComponent from "../../components/carouselComponent/carouselComponent";
 import { websites, mobileApps, otherApps, videosAndRenders } from "../../config/constants";
 import OverviewCard from "../../components/overviewCard/overviewCard";
-import { GetPositionOfanElementInPage, HandleMobilesize } from "../../config/helpers";
+import { GetCurrentScrollHeight, GetPositionOfanElementInPage, HandleMobilesize } from "../../config/helpers";
 
 const WorkPage = () => {
     const [isMobile, setIsMobile] = useState(false)
@@ -17,9 +17,10 @@ const WorkPage = () => {
     HandleMobilesize(setIsMobile)
     
     const height = GetPositionOfanElementInPage(elementRef)
+    const scrollHeight = GetCurrentScrollHeight()
 
     const scrollTo = () => {
-        scroll.scrollTo(height.top + height.bottom);
+        scroll.scrollTo(height.top +scrollHeight - window.innerHeight);
       };
 
     const renderCarousel = () => {
@@ -88,7 +89,6 @@ const WorkPage = () => {
             <div className="work-carousel" ref={elementRef}>
                 {renderCarousel()}
             </div>
-
         </div>
     )
 }

@@ -71,3 +71,20 @@ export const GetPositionOfanElementInPage = (divRef) => {
 
     return divPosition
 }
+
+export const GetCurrentScrollHeight = () => {
+  const [scrollHeight, setScrollHeight] = useState(window.innerHeight)
+  useEffect(() => {
+      const handleScroll = () => {
+          setScrollHeight(window.scrollY + window.innerHeight)
+      }
+
+      window.addEventListener('scroll', handleScroll)
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+  },[])
+
+  return(scrollHeight)
+}

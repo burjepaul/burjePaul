@@ -12,7 +12,7 @@ const OverviewCard = ({title, images, description, index, handleClick}) => {
         <Tilt>
             <motion.div
                 onClick={() => {
-                    if(index > 10) handleClick(title)}}
+                    if(index >= 10) handleClick(title)}}
                 variants={fadeIn("down", "spring", 0.25 * index, 0.75)}
                 className="overview-card"
             >

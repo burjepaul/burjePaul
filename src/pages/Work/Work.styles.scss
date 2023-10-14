@@ -3,6 +3,7 @@
     padding-top: 10rem;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
     
     .work-card-container{
         display: grid;
@@ -39,6 +40,9 @@
             display: grid;
             width: 80%;
             grid-row-gap: 4rem;
+        }
+        .work-carousel{
+            margin: 8% 0%;
         }
     }
 }

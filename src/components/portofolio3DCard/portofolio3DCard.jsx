@@ -4,11 +4,11 @@ import './portofolio3DCard.styles.scss'
 
 const Portofolio3DCard = ({value}) => {
   return (
-    <div className='mobile-card-container'>
-        <h1 className='mobile-card-title'>{value.title}</h1>
-        <div className='mobile-card-content-container'>
+    <div className='render-card-container'>
+        <h1 className='render-card-title'>{value.title}</h1>
+        <div className='render-card-content-container'>
 
-          <iframe title={value.videoLink} className='mobile-video'
+          <iframe title={value.videoLink} className='render-video'
               src={`https://www.youtube.com/embed/${value.videoLink}?playlist=${value.videoLink}&loop=1&controls=0`}>
           </iframe>
 
