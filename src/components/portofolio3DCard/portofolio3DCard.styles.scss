@@ -26,3 +26,15 @@
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .render-card-container{
+        height: 20rem;
+        .render-card-content-container{
+            .render-video{
+                height: 15rem;
+            }
+
+        }
+    }
+}
