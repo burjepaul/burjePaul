@@ -72,6 +72,9 @@ const WorkPage = () => {
             <h1 className="work-page-title">
                 My Work Portofolio
             </h1>
+            <h1 className="work-page-subtitle">
+                Pick a category
+            </h1>
 
             <div 
             style={isMobile ? {gridTemplateColumns: "100%"} : {gridTemplateColumns: "50% 50%"}}
