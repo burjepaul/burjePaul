@@ -30,7 +30,7 @@ const OverviewCard = ({title, images, description, index, handleClick}) => {
                                 )})}
                     </div>
 
-                    <ul>
+                    <ul className="overview-text-container">
                         {description.map((entry) => {
                             return(
                                 <li className="overview-text" key={entry}>{entry}</li>
