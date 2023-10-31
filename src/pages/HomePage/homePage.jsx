@@ -136,7 +136,7 @@ const HomePage = () => {
               </motion.div>
         </motion.div>
 
-        <h2 className="projects-subtitle" style={{textAlign:"center", marginLeft:0}}><a href="/work" rel="noreferrer" className="see-work-page-anchor">See Work Page</a> for more projects</h2>
+        <h2 className="projects-subtitle" style={{textAlign:"center"}}><a href="/work" rel="noreferrer" className="see-work-page-anchor">See Work Page</a> for more projects</h2>
 
         <h1 className="projects-title">Prices.</h1>
         <h2 className="price-text">

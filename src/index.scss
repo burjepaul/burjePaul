@@ -5,7 +5,7 @@
   --color-title: #0fbeb0;
   --color-subtitle: #4361ee;
   --color-subSubTitle: #3a0ca3;
-  --color-heading:#5a02be;
+  --color-heading:#4c0b77;;
   --color-paragraph: #910644;
   --box-shadow: 0px 0px 15px 1px var(--color-paragraph);
   --text-shadow: var(--color-paragraph) 1px 0 10px;
@@ -26,7 +26,9 @@
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--color-background);
+    background-image: url('./assets/background-image.jpg');
+    background-size: cover; 
+    background-attachment: fixed;
   }
   
   code {
