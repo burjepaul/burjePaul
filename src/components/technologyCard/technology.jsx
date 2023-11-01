@@ -20,7 +20,7 @@ const TechnologyCard = ({values, index}) => {
             }}>
 
             </div>
-            <p>{values.name}</p>
+            <p className="technologies-text">{values.name}</p>
         </motion.div>
     )
 }

@@ -6,10 +6,10 @@
 <g transform="matrix(Infinity NaN NaN Infinity 0 0)" id="43b3df5e-e66f-4c4c-bfbe-1fd8450f9fe4">
 </g>
 <g transform="matrix(1 0 0 1 540 540)" id="abab42a8-2f38-40ef-9d62-713c265bb682">
-<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(155,155,155); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080" height="1080"/>
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080" height="1080"/>
 </g>
 <g transform="matrix(1.25 0 0 1.35 631.19 540.84)" style="" id="8788b9dd-dcf9-4570-8647-3d2f43c80aae">
-		<text xml:space="default" font-family="Lato" font-size="40" font-style="normal" font-weight="400" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(95, 67, 14); fill-rule: nonzero; opacity: 1; white-space: pre;"><tspan x="-42.76" y="12.57">racle</tspan></text>
+		<text xml:space="default" font-family="Lato" font-size="40" font-style="normal" font-weight="400" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1; white-space: pre;"><tspan x="-42.76" y="12.57">racle</tspan></text>
 </g>
 <g transform="matrix(1.11 0 0 1.11 544.72 540)">
 <g style="" vector-effect="non-scaling-stroke">
@@ -3730,6 +3730,6 @@
 </g>
 </g>
 <g transform="matrix(1.38 0 0 1.38 441.39 540)" style="" id="4f3bdddf-88bd-4f70-86c4-6561a57b581d">
-		<text xml:space="preserve" font-family="Lato" font-size="40" font-style="normal" font-weight="400" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(95, 67, 14); fill-rule: nonzero; opacity: 1; white-space: pre;"><tspan x="-33.4" y="12.57">The</tspan></text>
+		<text xml:space="preserve" font-family="Lato" font-size="40" font-style="normal" font-weight="400" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1; white-space: pre;"><tspan x="-33.4" y="12.57">The</tspan></text>
 </g>
 </svg>

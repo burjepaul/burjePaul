@@ -5,6 +5,7 @@ import {ReactComponent as Logo} from '../../assets/logo.svg'
 
 import './navigation.styles.scss'
 import './burger-menu.styles.scss'
+import { DetectScroll } from "../../config/helpers"
 
 const Navigation = () => {
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
@@ -12,6 +13,8 @@ const Navigation = () => {
     const [isMenuClicked, setIsMenuClicked] = useState(false)
     const [viewportWidth, setViewportWidth] = useState(window.innerWidth)
     
+    const scroll = DetectScroll()
+
     const toggle_hide = () => {
         setBurgerClass("burger-bar unclicked")
         setMenuClass("menu hidden")
@@ -35,16 +38,18 @@ const Navigation = () => {
     return (
         <Fragment>
             <div style={{width:'100%', height:'9vh'}}>
-                <Link className="logo-container" to="/">
-                    <Logo className="logo"/>
-                </Link>
-                <nav>
-                    <div className="burger-menu" onClick={updateMenu}>
-                        <div className={burger_class}></div>
-                        <div className={burger_class}></div>
-                        <div className={burger_class}></div>
-                    </div>
-                </nav>
+                <div className="navigation-burger" style={scroll === 'down' ? {opacity: 0} : {opacity: 100}}>
+                    <Link className="logo-container" to="/">
+                        <Logo className="logo"/>
+                    </Link>
+                    <nav>
+                        <div className="burger-menu" onClick={updateMenu}>
+                            <div className={burger_class}></div>
+                            <div className={burger_class}></div>
+                            <div className={burger_class}></div>
+                        </div>
+                    </nav>
+                </div>
 
                 <div className={menu_class}>
                         <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/work'>
@@ -65,7 +70,7 @@ const Navigation = () => {
     else{
         return(
           <Fragment>
-            <div className="navigation">
+            <div className="navigation" style={scroll === 'down' ? {opacity: 0} : {opacity: 100}}>
                 <Link className="logo-container" to="/">
                     <Logo className="logo"/>
                 </Link>
