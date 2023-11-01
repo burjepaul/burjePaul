@@ -49,7 +49,6 @@ const Navigation = () => {
                             <div className={burger_class}></div>
                         </div>
                     </nav>
-                </div>
 
                 <div className={menu_class}>
                         <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/work'>
@@ -61,6 +60,7 @@ const Navigation = () => {
                         <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/contact'>
                             Contact
                         </Link>
+                </div>
                 </div>
             <Outlet/>
             </div>
