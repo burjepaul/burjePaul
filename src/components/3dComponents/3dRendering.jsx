@@ -10,10 +10,7 @@ const Rendering = (props) => {
   const { nodes, materials } = useGLTF('../../3dRendering.glb')
   return (
     <group {...props} dispose={null} position={props.isMobile ? [-1.5, -1, -1] : [-2, 0, -1]} rotation={[0, 4, 0]} scale={props.isMobile ? 0.8 : 1}>
-      <group position={[-0.145, -1.709, 0.188]} rotation={[-Math.PI / 2, 0, 0]} scale={2.366}>
-        <mesh geometry={nodes.Box001.geometry} material={materials.Material__26} scale={0.025} />
-      </group>
-      <group position={[0.042, -0.12, -0.066]} rotation={[0, 0.611, 0]} scale={2.366}>
+      <group position={[0.042, -0.7, -0.066]} rotation={[0, 0.611, 0]} scale={2.366}>
         <mesh geometry={nodes.Text001.geometry} material={materials.Material__26} scale={0.025} />
       </group>
       <group position={[-0.288, -2.776, 1.504]} scale={[3.815, 3.815, 3.857]}>
