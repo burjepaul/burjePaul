@@ -17,6 +17,7 @@ import TechnologyCard from "../../components/technologyCard/technology";
 import VideoAnimation from '../../assets/LogoVideo.mp4'
 import MobilePhone from '../../assets/Mobile-photo.png'
 
+
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false)
 

@@ -1,4 +1,6 @@
 import { Html, useProgress } from "@react-three/drei";
+import icons from "../../assets/icons.svg";
+import './Loader.scss'
 
 const Loader = () => {
     const {progress} = useProgress()
@@ -6,16 +8,12 @@ const Loader = () => {
     return(
         <Html>
             <span className="canvas-loader"></span>
-            <p
-                style={{
-                    fontSize: 14,
-                    color: '#f1f1f1',
-                    fontWeight:800,
-                    marginTop:40
-                }}
-            >
-                {progress.toFixed(2)}%
-            </p>
+                <div className="spinner">
+                    <svg>
+                        <use href={`${icons}#icon-loader`}></use>
+                    </svg>
+                <h2>{progress.toFixed(2)}%</h2>
+            </div>
         </Html>
     )
 }
