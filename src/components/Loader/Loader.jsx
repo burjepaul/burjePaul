@@ -8,12 +8,13 @@ const Loader = () => {
     return(
         <Html>
             <span className="canvas-loader"></span>
+                {progress < 100 ? 
                 <div className="spinner">
                     <svg>
                         <use href={`${icons}#icon-loader`}></use>
                     </svg>
+            </div> : null}
                 <h2>{progress.toFixed(2)}%</h2>
-            </div>
         </Html>
     )
 }

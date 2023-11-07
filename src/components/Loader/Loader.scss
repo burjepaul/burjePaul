@@ -1,17 +1,16 @@
 .spinner {
-    margin: auto;
-    text-align: center;
+  margin: auto;
     svg {
-      height: 10rem;
-      width: 10rem;
+      height: 5rem;
+      width: 5rem;
       fill: var(--color-title);
       animation: rotate 2s infinite linear;
       
     }
-    h2{
-      font-weight: 800;
-      color:var(--color-title);
-    }
+  }
+  h2{
+    font-weight: 800;
+    color:var(--color-title);
   }
   
   
